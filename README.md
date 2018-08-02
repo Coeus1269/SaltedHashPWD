@@ -4,6 +4,8 @@ Simplified Salted-Hash password class
   This project contains 2 classes, the main class (SaltedHashPassword)
     and a test class to demonstrated the usage and functionality (PWDTests.java)
     
+    I created this for a project using Java SE 7 (1.7.0_71)
+    
 	The goal of this class is to have a simplified Salted-Hash password creator and validator
 	 It is my belief that the most secure method for the salted hash combo is to have the salt hard coded into your 
 	 application and store the salted-hash in the database. A sttic method, generateSalt, is included for creating 
