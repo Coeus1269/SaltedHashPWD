@@ -19,3 +19,21 @@ Simplified Salted-Hash password class
 	 Therefore this class assumes that you have the SALT in your code outside of this class.
 	 This class is based on the work and ideas of Taylor Hornby taylor@defuse.ca
 	   https://github.com/defuse/password-hashing
+
+	The calss is partially static so you can use some of the funfctionality wothout instantiation.
+	
+USAGE:
+	The simplest usage:
+		Create a HASH: String tempHash = SaltedHashPassword.createHash(tempPWD,tempSalt); // static usage example
+		
+		VAalidate a HASH: SaltedHashPassword SPWD = new SaltedHashPassword(tempPWD,tempSalt,tempHash);
+				if(SPWD.verifyPassword()) // used after instantiation
+				  {
+				  Do stuff
+				  } 
+				  
+				  if(SPWD.verifyPassword(tempPWD,tempHash)) // used after salt already set
+				  {
+				  Do stuff
+				  } 
+				  
